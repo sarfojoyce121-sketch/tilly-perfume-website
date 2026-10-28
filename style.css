@@ -1,0 +1,418 @@
+
+/* GENERAL SETTINGS */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #29221c;
+  background-color: #fffaf4;
+}
+
+/* NAVIGATION BAR */
+.navigation-bar {
+  display: flex;
+  width: 100%;
+  min-height: 70px;
+  background-color: #f5e6d3;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px #00000012;
+}
+
+.nav-left {
+  display: flex;
+  height: 60px;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 800;
+  font-family: Georgia, serif;
+  color: #6d351b;
+}
+
+.nav-right {
+  display: flex;
+  min-height: 60px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.booknow {
+  display: inline-flex;
+  min-height: 40px;
+  padding: 0 24px;
+  background-color: #7a3e20;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.booknow:hover {
+  background-color: #b17b43;
+  transform: translateY(-2px);
+}
+
+/* WELCOME IMAGE */
+.welcome-image {
+  position: relative;
+  display: flex;
+  height: 420px;
+  width: 100%;
+  background-color: #5c4232;
+  overflow: hidden;
+}
+
+.image {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* WELCOME TEXT */
+.welcome-section {
+  display: flex;
+  width: 100%;
+  min-height: 300px;
+  padding: 45px 7%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: #fffaf4;
+}
+
+.welcome-txt {
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 4vw, 45px);
+  font-weight: bold;
+  color: #6d351b;
+  margin-bottom: 18px;
+}
+
+.welcome-detail {
+  max-width: 650px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #66594e;
+  margin-bottom: 25px;
+}
+
+.shop-button {
+  display: inline-block;
+  background: #7a3e20;
+  color: white;
+  text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.shop-button:hover {
+  background: #b17b43;
+}
+
+/* SECTION HEADINGS */
+.section-heading {
+  text-align: center;
+  padding: 45px 15px 25px;
+}
+
+.section-heading h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  color: #6d351b;
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: #75665a;
+  line-height: 1.6;
+}
+
+/* PERFUME PRODUCTS */
+.products {
+  padding: 20px 6% 65px;
+  background: #f8efe5;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px #0000000d;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px #00000015;
+}
+
+.product-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h3 {
+  color: #6d351b;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.product-info p {
+  color: #75665a;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.product-price {
+  color: #7a3e20 !important;
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+.order-button {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: #7a3e20;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.order-button:hover {
+  background: #b17b43;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 65px 7%;
+  background: white;
+}
+
+.about-section h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  color: #6d351b;
+}
+
+.about-section p {
+  max-width: 700px;
+  color: #66594e;
+  line-height: 1.9;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  padding: 55px 7%;
+  text-align: center;
+  background: #f5e6d3;
+}
+
+.contact-section h2 {
+  font-family: Georgia, serif;
+  color: #6d351b;
+  font-size: 32px;
+}
+
+.contact-section p {
+  line-height: 1.8;
+  color: #66594e;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 13px 25px;
+  border-radius: 6px;
+  background: #168b48;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-button:hover {
+  background: #116b37;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 15px;
+  background: #2a1b13;
+  color: white;
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer a {
+  color: #e7c79e;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* TABLETS */
+@media (max-width: 850px) {
+  .product-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .welcome-image {
+    height: 350px;
+  }
+}
+
+/* MOBILE PHONES */
+@media (max-width: 550px) {
+  .navigation-bar {
+    min-height: 65px;
+    padding: 0 5%;
+  }
+
+  .nav-left {
+    font-size: 24px;
+  }
+
+  .nav-right {
+    min-height: 55px;
+  }
+
+  .booknow {
+    min-height: 36px;
+    padding: 0 16px;
+    font-size: 12px;
+  }
+
+  .welcome-image {
+    height: 260px;
+  }
+
+  .welcome-section {
+    min-height: 280px;
+    padding: 35px 20px;
+  }
+
+  .welcome-txt {
+    font-size: 29px;
+  }
+
+  .welcome-detail {
+    font-size: 14px;
+  }
+
+  .section-heading h2,
+  .about-section h2,
+  .contact-section h2 {
+    font-size: 27px;
+  }
+
+  .products {
+    padding: 15px 5% 45px;
+  }
+
+  .product-container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .product-card img {
+    height: 280px;
+  }
+}
+
+.booknow{
+  display: flex;
+  height: 30px;
+  width: fit-content;
+  background-color: rgb(71, 71, 240);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border: none;
+ border-radius: 12px;
+ cursor: pointer;
+}
+
+.welcome-image{
+  display: flex;
+  height: 400px;
+  width: 100%;
+  background-color: gray;
+  overflow: hidden;
+}
+
+.image{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.welcome-section{
+  display: flex;
+  width: 100%;
+  height: 300px;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
